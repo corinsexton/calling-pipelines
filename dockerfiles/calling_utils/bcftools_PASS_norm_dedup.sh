@@ -59,7 +59,7 @@ bcftools view --header-only "$INPUT_VCF" > "$TMP_HEAD"
 trap 'rm -f "$TMP_HEAD"' EXIT
 
 # Set filter based on header
-if grep -q -m1 'FEX' "$TMP_HEAD"; then
+if grep -q -m1 'ID=FEX' "$TMP_HEAD"; then
     FILTER='FILTER=="PASS" || INFO/FEX=="PASS"'
 elif grep -q -m1 'longcallD' "$TMP_HEAD"; then
     # Keep PASS records that are NOT SVs (i.e., SVTYPE tag absent from INFO)
