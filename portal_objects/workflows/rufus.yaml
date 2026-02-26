@@ -10,7 +10,7 @@ runner:
   main: rufus.cwl
 
 software:
-  - RUFUS@d1.1.2
+  - RUFUS@d1.1.3
 
 category:
   - Variant Calling
